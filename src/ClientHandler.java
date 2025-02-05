@@ -20,7 +20,7 @@ public class ClientHandler implements Runnable {
             while (true) {
                 String messageFromClient = inputStream.readUTF();
 
-                System.out.println("클라이언트가 입력한 메시지는 다음과 같습니다: " + messageFromClient);
+                System.out.println(socket.getPort() + " 클라이언트가 입력한 메시지는 다음과 같습니다: " + messageFromClient);
                 if (messageFromClient.equals("exit")) {
                     break;
                 }
